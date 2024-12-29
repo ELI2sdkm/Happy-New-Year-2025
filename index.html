@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>新年祝福网页</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
 </head>
 <body>
     <!-- 首页 -->
     <section id="home" class="section">
-        <h1>新年快乐，我的朋友们！</h1>
+        <h1>新年快乐，亲爱的朋友！</h1>
         <p>愿新年的星光洒满前行的路，愿每个期待都如约而至。</p>
         <button onclick="scrollToSection('blessings')">查看我的祝福</button>
     </section>
@@ -18,24 +20,24 @@
     <section id="blessings" class="section">
         <h2>我的祝福</h2>
         <div class="blessing-card">
-            <p>亲爱的 XXX，希望新的一年，你能心想事成，万事胜意！</p>
+            <p>亲爱的朋友，希望新的一年，万事胜意！</p>
         </div>
         <div class="blessing-card">
-            <p>亲爱的 YYY，愿你的努力都有回报，新年快乐！</p>
+            <p>亲爱的朋友，愿你的努力都有回报，新年快乐！</p>
         </div>
-        <button onclick="scrollToSection('feedback')">告诉我你的心声</button>
+        <button onclick="scrollToSection('feedback')">留下你想对我说的话</button>
     </section>
 
     <!-- 对我的印象互动区 -->
     <section id="feedback" class="section">
         <h2>对我的印象</h2>
-        <p>请分享你对我的印象和期待，让我在未来变得更好！</p>
+        <p>如果愿意，请留下你的想法，不强求哦～</p>
         <form id="feedback-form">
             <label for="impression">1. 你对我的印象是什么？</label>
-            <textarea id="impression" name="impression" rows="3" required></textarea>
+            <textarea id="impression" name="impression" rows="3"></textarea>
 
             <label for="expectation">2. 你有什么对我的期待？</label>
-            <textarea id="expectation" name="expectation" rows="3" required></textarea>
+            <textarea id="expectation" name="expectation" rows="3"></textarea>
 
             <label for="message">3. 还想对我说什么？</label>
             <textarea id="message" name="message" rows="3"></textarea>
@@ -47,26 +49,6 @@
         </div>
     </section>
 
-    <!-- 结尾 -->
-    <section id="end" class="section">
-        <h2>我的新年愿望</h2>
-        <p>愿我在未来能够更优秀，学业进步，生活幸福，也祝大家一切都好！</p>
-    </section>
-
-    <script>
-        // 滚动到指定区域
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
-        }
-
-        // 表单提交处理
-        const form = document.getElementById('feedback-form');
-        const thankYouMessage = document.getElementById('thank-you');
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-            thankYouMessage.classList.remove('hidden');
-            form.reset();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
