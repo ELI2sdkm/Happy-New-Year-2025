@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新年祝福网页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 首页 -->
+    <section id="home" class="section">
+        <h1>新年快乐，我的朋友们！</h1>
+        <p>愿新年的星光洒满前行的路，愿每个期待都如约而至。</p>
+        <button onclick="scrollToSection('blessings')">查看我的祝福</button>
+    </section>
+
+    <!-- 祝福详情页 -->
+    <section id="blessings" class="section">
+        <h2>我的祝福</h2>
+        <div class="blessing-card">
+            <p>亲爱的 XXX，希望新的一年，你能心想事成，万事胜意！</p>
+        </div>
+        <div class="blessing-card">
+            <p>亲爱的 YYY，愿你的努力都有回报，新年快乐！</p>
+        </div>
+        <button onclick="scrollToSection('feedback')">告诉我你的心声</button>
+    </section>
+
+    <!-- 对我的印象互动区 -->
+    <section id="feedback" class="section">
+        <h2>对我的印象</h2>
+        <p>请分享你对我的印象和期待，让我在未来变得更好！</p>
+        <form id="feedback-form">
+            <label for="impression">1. 你对我的印象是什么？</label>
+            <textarea id="impression" name="impression" rows="3" required></textarea>
+
+            <label for="expectation">2. 你有什么对我的期待？</label>
+            <textarea id="expectation" name="expectation" rows="3" required></textarea>
+
+            <label for="message">3. 还想对我说什么？</label>
+            <textarea id="message" name="message" rows="3"></textarea>
+
+            <button type="submit">提交</button>
+        </form>
+        <div id="thank-you" class="hidden">
+            <p>感谢你的留言，新的一年一起变得更好吧！</p>
+        </div>
+    </section>
+
+    <!-- 结尾 -->
+    <section id="end" class="section">
+        <h2>我的新年愿望</h2>
+        <p>愿我在未来能够更优秀，学业进步，生活幸福，也祝大家一切都好！</p>
+    </section>
+
+    <script>
+        // 滚动到指定区域
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+        }
+
+        // 表单提交处理
+        const form = document.getElementById('feedback-form');
+        const thankYouMessage = document.getElementById('thank-you');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            thankYouMessage.classList.remove('hidden');
+            form.reset();
+        });
+    </script>
+</body>
+</html>

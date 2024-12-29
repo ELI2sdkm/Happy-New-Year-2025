@@ -1,0 +1,94 @@
+/* 通用样式 */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #ffe6f0, #fffaf2);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ff6f91;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+button {
+    background: #ff6f91;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #ff3f6e;
+}
+
+/* 首页 */
+#home {
+    background: url('https://via.placeholder.com/1920x1080/FFE6F0/FFFFFF?text=Happy+New+Year') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
+}
+
+#home button {
+    background: #fff;
+    color: #ff6f91;
+    border: 2px solid #ff6f91;
+}
+
+#home button:hover {
+    background: #ff6f91;
+    color: #fff;
+}
+
+/* 祝福详情页 */
+.blessing-card {
+    background: #fff;
+    border: 1px solid #ff6f91;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 表单样式 */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 结尾 */
+#end {
+    background: #ff6f91;
+    color: #fff;
+}
